@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="145 132, -"
+    android:layout_gravity="center_horizontal"
+    android:textSize="30sp"/>
+    <RadioGroup
+        android:id="@+id/graph_view_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <RadioButton
+            android:id="@+id/radio_1_month"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/graph_button_selector"
+            android:text="1m"
+            android:gravity="center"
+            android:button="@null"/>
+    <RadioButton
+        android:id="@+id/radio_1_Year"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/graph_button_selector"
+        android:text="1ar"
+        android:gravity="center"
+        android:button="@null"/>
+    <RadioButton
+        android:id="@+id/radio_3_year"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/graph_button_selector"
+        android:text="3ar"
+        android:gravity="center"
+        android:button="@null"/>
+        <RadioButton
+            android:id="@+id/radio_5_year"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/graph_button_selector"
+            android:text="5ar"
+            android:gravity="center"
+            android:button="@null"/>
+    </RadioGroup>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
