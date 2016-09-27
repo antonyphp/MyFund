@@ -7,9 +7,9 @@
     android:fillViewport="true">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/graph_view_layout"
@@ -20,36 +20,57 @@
                 android:id="@+id/vpPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp" />
+
             <com.viewpagerindicator.CirclePageIndicator
                 android:id="@+id/circle_page_indicator"
-                android:padding="10dip"
-                android:layout_height="wrap_content"
                 android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/vpPager"
-                />
+                android:paddingTop="10dp" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <!--<ListView-->
+            <!--android:layout_below="@id/txt_alle_fond"-->
+            <!--android:id="@+id/list_view"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--</ListView>-->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                app:tabTextAppearance="@style/TabTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/tab_rounded_corner"
+                android:layout_margin="15dp"
+                app:tabMode="fixed"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/colorPrimary" />
+
             <TextView
                 android:id="@+id/txt_alle_fond"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:layout_below="@id/tabs"
                 android:text="ALLE FOND"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_margin="10dp"/>
+                android:textSize="10sp"
+                android:textStyle="bold" />
 
-            <ListView
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@id/txt_alle_fond"
-                android:id="@+id/list_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            </ListView>
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
